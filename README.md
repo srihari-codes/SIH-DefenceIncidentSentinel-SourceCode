@@ -10,6 +10,76 @@
   <strong>A comprehensive cyber incident reporting and analysis platform for defence-grade security operations</strong>
 </p>
 
+---
+
+## 👥 Team Black Order
+
+<p align="center">
+  <img src="https://img.shields.io/badge/🏆_Team-Black_Order-8B0000?style=for-the-badge&logo=marvel&logoColor=white" alt="Team Black Order">
+  <img src="https://img.shields.io/badge/🥇_SIH_2025-WINNERS-FFD700?style=for-the-badge" alt="SIH 2025 Winners">
+</p>
+
+<table align="center">
+  <tr>
+    <td align="center" width="200">
+      <a href="https://github.com/Soy-7">
+        <img src="https://github.com/Soy-7.png" width="100" height="100" style="border-radius: 50%;" alt="SaiShravan P"/><br />
+        <sub><b>SaiShravan P</b></sub>
+      </a><br />
+      <a href="https://github.com/Soy-7"><img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github" alt="GitHub"/></a>
+      <a href="https://www.linkedin.com/in/sai-shravan-p/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
+    </td>
+    <td align="center" width="200">
+      <a href="https://github.com/srihari-codes">
+        <img src="https://github.com/srihari-codes.png" width="100" height="100" style="border-radius: 50%;" alt="Srihari P"/><br />
+        <sub><b>Srihari P</b></sub>
+      </a><br />
+      <a href="https://github.com/srihari-codes"><img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github" alt="GitHub"/></a>
+      <a href="https://www.linkedin.com/in/iamsrihari"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
+    </td>
+    <td align="center" width="200">
+      <a href="https://github.com/rakavip2-bot">
+        <img src="https://github.com/rakavip2-bot.png" width="100" height="100" style="border-radius: 50%;" alt="Rakavi P"/><br />
+        <sub><b>Rakavi P</b></sub>
+      </a><br />
+      <a href="https://github.com/rakavip2-bot"><img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github" alt="GitHub"/></a>
+      <a href="https://www.linkedin.com/in/iamrakavi"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="200">
+      <a href="https://github.com/BennyhinnTitus">
+        <img src="https://github.com/BennyhinnTitus.png" width="100" height="100" style="border-radius: 50%;" alt="Bennyhinn Titus D"/><br />
+        <sub><b>Bennyhinn Titus D</b></sub>
+      </a><br />
+      <a href="https://github.com/BennyhinnTitus"><img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github" alt="GitHub"/></a>
+      <a href="https://www.linkedin.com/in/bennyhinn-titus"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
+    </td>
+    <td align="center" width="200">
+      <a href="https://github.com/Rake-5105">
+        <img src="https://github.com/Rake-5105.png" width="100" height="100" style="border-radius: 50%;" alt="Rakesh Kannan C K"/><br />
+        <sub><b>Rakesh Kannan C K</b></sub>
+      </a><br />
+      <a href="https://github.com/Rake-5105"><img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github" alt="GitHub"/></a>
+      <a href="https://www.linkedin.com/in/rakesh005/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
+    </td>
+    <td align="center" width="200">
+      <a href="https://github.com/SaiMohanRam">
+        <img src="https://github.com/SaiMohanRam.png" width="100" height="100" style="border-radius: 50%;" alt="Sai Mohana Ram D"/><br />
+        <sub><b>Sai Mohana Ram D</b></sub>
+      </a><br />
+      <a href="https://github.com/SaiMohanRam"><img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github" alt="GitHub"/></a>
+      <a href="https://www.linkedin.com/in/sai-mohana-ram-d-610a53267/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
+    </td>
+  </tr>
+</table>
+
+<p align="center">
+  <sub>🏆 <strong>Smart India Hackathon 2025 Winners</strong> 🏆</sub>
+</p>
+
+---
+
 <p align="center">
   <a href="#-overview">Overview</a> •
   <a href="#-architecture">Architecture</a> •
@@ -42,50 +112,50 @@
 │                              DEFENCE INCIDENT SENTINEL                          │
 ├─────────────────────────────────────────────────────────────────────────────────┤
 │                                                                                 │
-│  ┌─────────────────────┐    ┌─────────────────────┐    ┌─────────────────────┐ │
-│  │   User Registration │    │   User Dashboard    │    │   Admin Dashboard   │ │
-│  │   (React + TS)      │    │   (React + JS)      │    │   (React + TS)      │ │
-│  │   Port: 5173        │    │   Port: 5174        │    │   Port: 5175        │ │
-│  └──────────┬──────────┘    └──────────┬──────────┘    └──────────┬──────────┘ │
+│  ┌─────────────────────┐    ┌─────────────────────┐    ┌─────────────────────┐  │
+│  │   User Registration │    │   User Dashboard    │    │   Admin Dashboard   │  │
+│  │   (React + TS)      │    │   (React + JS)      │    │   (React + TS)      │  │
+│  │   Port: 5173        │    │   Port: 5174        │    │   Port: 5175        │  │
+│  └──────────┬──────────┘    └──────────┬──────────┘    └──────────┬──────────┘  │
 │             │                          │                          │             │
 │             ▼                          ▼                          ▼             │
-│  ┌─────────────────────┐    ┌─────────────────────┐    ┌─────────────────────┐ │
-│  │   Auth Backend      │    │   Chatbot Backend   │    │   Admin Backend     │ │
-│  │   (Express + JS)    │    │   (Express + JS)    │    │   (Express + TS)    │ │
-│  │   Port: 3001        │    │   Port: 3000        │    │   Port: 3002        │ │
-│  └──────────┬──────────┘    └──────────┬──────────┘    └──────────┬──────────┘ │
+│  ┌─────────────────────┐    ┌─────────────────────┐    ┌─────────────────────┐  │
+│  │   Auth Backend      │    │   Chatbot Backend   │    │   Admin Backend     │  │
+│  │   (Express + JS)    │    │   (Express + JS)    │    │   (Express + TS)    │  │
+│  │   Port: 3001        │    │   Port: 3000        │    │   Port: 3002        │  │
+│  └──────────┬──────────┘    └──────────┬──────────┘    └──────────┬──────────┘  │
 │             │                          │                          │             │
 │             └──────────────────────────┼──────────────────────────┘             │
 │                                        │                                        │
 │                                        ▼                                        │
-│  ┌─────────────────────────────────────────────────────────────────────────┐   │
-│  │                      CERT Command Center (React + TS)                    │   │
-│  │                              Port: 5176                                  │   │
-│  └──────────────────────────────────┬──────────────────────────────────────┘   │
+│  ┌─────────────────────────────────────────────────────────────────────────┐    │
+│  │                      CERT Command Center (React + TS)                   │    │
+│  │                              Port: 5176                                 │    │
+│  └──────────────────────────────────┬──────────────────────────────────────┘    │
 │                                     │                                           │
 │                                     ▼                                           │
-│  ┌─────────────────────────────────────────────────────────────────────────┐   │
-│  │                  File Scanning Microservice (FastAPI + Python)          │   │
-│  │                              Port: 8000                                  │   │
-│  │  ┌───────────┐ ┌───────────┐ ┌───────────┐ ┌───────────┐ ┌───────────┐  │   │
-│  │  │  ClamAV   │ │  YARA     │ │  OCR/NLP  │ │  ML/CV    │ │  Crypto   │  │   │
-│  │  │  Scanner  │ │  Rules    │ │  Engine   │ │  Analysis │ │  Hashing  │  │   │
-│  │  └───────────┘ └───────────┘ └───────────┘ └───────────┘ └───────────┘  │   │
-│  └──────────────────────────────────┬──────────────────────────────────────┘   │
+│  ┌─────────────────────────────────────────────────────────────────────────┐    │
+│  │                  File Scanning Microservice (FastAPI + Python)          │    │
+│  │                              Port: 8000                                 │    │
+│  │  ┌───────────┐ ┌───────────┐ ┌───────────┐ ┌───────────┐ ┌───────────┐  │    │
+│  │  │  ClamAV   │ │  YARA     │ │  OCR/NLP  │ │  ML/CV    │ │  Crypto   │  │    │
+│  │  │  Scanner  │ │  Rules    │ │  Engine   │ │  Analysis │ │  Hashing  │  │    │
+│  │  └───────────┘ └───────────┘ └───────────┘ └───────────┘ └───────────┘  │    │
+│  └──────────────────────────────────┬──────────────────────────────────────┘    │
 │                                     │                                           │
 │                                     ▼                                           │
-│  ┌─────────────────────────────────────────────────────────────────────────┐   │
-│  │                         Blockchain Layer (Hardhat + Solidity)            │   │
-│  │                     Immutable Risk Reports & Audit Trail                 │   │
-│  └─────────────────────────────────────────────────────────────────────────┘   │
+│  ┌─────────────────────────────────────────────────────────────────────────┐    │
+│  │                         Blockchain Layer (Hardhat + Solidity)           │    │
+│  │                     Immutable Risk Reports & Audit Trail                │    │
+│  └─────────────────────────────────────────────────────────────────────────┘    │
 │                                                                                 │
-│  ┌─────────────────────────────────────────────────────────────────────────┐   │
-│  │                            Data Layer                                    │   │
-│  │  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐                   │   │
-│  │  │   MongoDB    │  │   Supabase   │  │  VirusTotal  │                   │   │
-│  │  │   Database   │  │   Storage    │  │     API      │                   │   │
-│  │  └──────────────┘  └──────────────┘  └──────────────┘                   │   │
-│  └─────────────────────────────────────────────────────────────────────────┘   │
+│  ┌─────────────────────────────────────────────────────────────────────────┐    │
+│  │                            Data Layer                                   │    │
+│  │  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐                   │    │
+│  │  │   MongoDB    │  │   Supabase   │  │  VirusTotal  │                   │    │
+│  │  │   Database   │  │   Storage    │  │     API      │                   │    │
+│  │  └──────────────┘  └──────────────┘  └──────────────┘                   │    │
+│  └─────────────────────────────────────────────────────────────────────────┘    │
 │                                                                                 │
 └─────────────────────────────────────────────────────────────────────────────────┘
 ```
@@ -624,74 +694,6 @@ pytest
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-## 👥 Team Black Order
-
-<p align="center">
-  <img src="https://img.shields.io/badge/🏆_Team-Black_Order-8B0000?style=for-the-badge&logo=marvel&logoColor=white" alt="Team Black Order">
-  <img src="https://img.shields.io/badge/🥇_SIH_2025-WINNERS-FFD700?style=for-the-badge" alt="SIH 2025 Winners">
-</p>
-
-<table align="center">
-  <tr>
-    <td align="center" width="200">
-      <a href="https://github.com/Soy-7">
-        <img src="https://github.com/Soy-7.png" width="100" height="100" style="border-radius: 50%;" alt="SaiShravan P"/><br />
-        <sub><b>SaiShravan P</b></sub>
-      </a><br />
-      <a href="https://github.com/Soy-7"><img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github" alt="GitHub"/></a>
-      <a href="https://www.linkedin.com/in/sai-shravan-p/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
-    </td>
-    <td align="center" width="200">
-      <a href="https://github.com/srihari-codes">
-        <img src="https://github.com/srihari-codes.png" width="100" height="100" style="border-radius: 50%;" alt="Srihari P"/><br />
-        <sub><b>Srihari P</b></sub>
-      </a><br />
-      <a href="https://github.com/srihari-codes"><img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github" alt="GitHub"/></a>
-      <a href="https://www.linkedin.com/in/iamsrihari"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
-    </td>
-    <td align="center" width="200">
-      <a href="https://github.com/rakavip2-bot">
-        <img src="https://github.com/rakavip2-bot.png" width="100" height="100" style="border-radius: 50%;" alt="Rakavi P"/><br />
-        <sub><b>Rakavi P</b></sub>
-      </a><br />
-      <a href="https://github.com/rakavip2-bot"><img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github" alt="GitHub"/></a>
-      <a href="https://www.linkedin.com/in/iamrakavi"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
-    </td>
-  </tr>
-  <tr>
-    <td align="center" width="200">
-      <a href="https://github.com/BennyhinnTitus">
-        <img src="https://github.com/BennyhinnTitus.png" width="100" height="100" style="border-radius: 50%;" alt="Bennyhinn Titus D"/><br />
-        <sub><b>Bennyhinn Titus D</b></sub>
-      </a><br />
-      <a href="https://github.com/BennyhinnTitus"><img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github" alt="GitHub"/></a>
-      <a href="https://www.linkedin.com/in/bennyhinn-titus"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
-    </td>
-    <td align="center" width="200">
-      <a href="https://github.com/Rake-5105">
-        <img src="https://github.com/Rake-5105.png" width="100" height="100" style="border-radius: 50%;" alt="Rakesh Kannan C K"/><br />
-        <sub><b>Rakesh Kannan C K</b></sub>
-      </a><br />
-      <a href="https://github.com/Rake-5105"><img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github" alt="GitHub"/></a>
-      <a href="https://www.linkedin.com/in/rakesh005/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
-    </td>
-    <td align="center" width="200">
-      <a href="https://github.com/SaiMohanRam">
-        <img src="https://github.com/SaiMohanRam.png" width="100" height="100" style="border-radius: 50%;" alt="Sai Mohana Ram D"/><br />
-        <sub><b>Sai Mohana Ram D</b></sub>
-      </a><br />
-      <a href="https://github.com/SaiMohanRam"><img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github" alt="GitHub"/></a>
-      <a href="https://www.linkedin.com/in/sai-mohana-ram-d-610a53267/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
-    </td>
-  </tr>
-</table>
-
-<p align="center">
-  <sub>🏆 <strong>Smart India Hackathon 2025 Winners</strong> 🏆</sub>
-</p>
 
 ---
 
