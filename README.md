@@ -1,7 +1,7 @@
 <p align="center">
   <img src="https://img.shields.io/badge/Status-Active-brightgreen?style=for-the-badge" alt="Status">
   <img src="https://img.shields.io/badge/License-MIT-blue?style=for-the-badge" alt="License">
-  <img src="https://img.shields.io/badge/SIH-2024-orange?style=for-the-badge" alt="SIH 2024">
+  <img src="https://img.shields.io/badge/🏆_SIH_2025-WINNERS-gold?style=for-the-badge" alt="SIH 2025 Winners">
 </p>
 
 <h1 align="center">🛡️ Defence Incident Sentinel</h1>
@@ -534,7 +534,7 @@ POST /analyze
 Content-Type: application/json
 
 {
-  "complaint_id": "COMP-2024-001234"
+  "complaint_id": "COMP-2025-001234"
 }
 ```
 
@@ -544,7 +544,7 @@ Content-Type: application/json
 {
   "status": "processing",
   "message": "Evidence analysis started for 3 file(s)",
-  "complaint_id": "COMP-2024-001234"
+  "complaint_id": "COMP-2025-001234"
 }
 ```
 
@@ -630,8 +630,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 👥 Team Black Order
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Team-Black_Order-8B0000?style=for-the-badge&logo=marvel&logoColor=white" alt="Team Black Order">
-  <img src="https://img.shields.io/badge/SIH-2025-FF6B00?style=for-the-badge" alt="SIH 2025">
+  <img src="https://img.shields.io/badge/🏆_Team-Black_Order-8B0000?style=for-the-badge&logo=marvel&logoColor=white" alt="Team Black Order">
+  <img src="https://img.shields.io/badge/🥇_SIH_2025-WINNERS-FFD700?style=for-the-badge" alt="SIH 2025 Winners">
 </p>
 
 <table align="center">
@@ -690,7 +690,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 </table>
 
 <p align="center">
-  <sub>🏆 Smart India Hackathon 2025 Winners</sub>
+  <sub>🏆 <strong>Smart India Hackathon 2025 Winners</strong> 🏆</sub>
 </p>
 
 ---
