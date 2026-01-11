@@ -1,0 +1,198 @@
+# ====================
+# Node.js / JavaScript / TypeScript
+# ====================
+
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+dist-ssr/
+build/
+bundle/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Local files
+*.local
+
+# Coverage
+coverage/
+
+# ====================
+# Python
+# ====================
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.dylib
+.Python
+
+# Distribution / packaging
+develop-eggs/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+PIPFILE.lock
+
+# Virtual environments
+venv/
+ENV/
+env/
+.venv/
+.virtualenv/
+virtualenv/
+env.bak/
+venv.bak/
+
+# Testing
+.coverage
+.coverage.*
+htmlcov/
+.pytest_cache/
+.tox/
+.nox/
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+
+# Type checking
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pyre/
+.pytype/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# ====================
+# Blockchain / Hardhat
+# ====================
+
+# Hardhat Build Artifacts
+artifacts/
+cache/
+
+# Typechain output
+typechain-types/
+types/
+
+# ====================
+# Database
+# ====================
+
+*.db
+*.sqlite
+*.sqlite3
+*.db-journal
+
+# ====================
+# Environment & Secrets
+# ====================
+
+.env
+.env.local
+.env.*.local
+*.env
+
+# Security files
+*.pem
+*.key
+*.cert
+*.crt
+*.p12
+*.pfx
+secrets/
+credentials/
+
+# ====================
+# IDE / Editor
+# ====================
+
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+.idea/
+*.swp
+*.swo
+*~
+.project
+.pydevproject
+.settings/
+*.sublime-project
+*.sublime-workspace
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# ====================
+# OS Generated
+# ====================
+
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# ====================
+# Temporary Files
+# ====================
+
+*.tmp
+*.temp
+*.bak
+temp/
+tmp/
+
+# ====================
+# Project Specific
+# ====================
+
+# Downloaded/Uploaded files for testing
+test_files/
+uploads/
+evidences/
+scripts/
+tests/
+
+# YARA rules (if compiled)
+*.yar.compiled
+
+# ClamAV database files (if local)
+clamav_db/
+*.cvd
+*.cld
+
+# Docker
+docker-compose.override.yml
