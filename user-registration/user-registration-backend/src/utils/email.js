@@ -10,7 +10,7 @@ let transporter;
 // Check if SMTP configuration is provided (even in development)
 const hasSmtpConfig = config.smtp.user && config.smtp.password && config.smtp.host;
 
-if (isDevelopment && !process.env.USE_REAL_EMAIL) {
+if (isDevelopment && process.env.USE_REAL_EMAIL !== 'true') {
   // Development (Default): Log emails to console
   transporter = {
     sendMail: async (mailOptions) => {

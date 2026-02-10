@@ -24,15 +24,18 @@ app.use(cors({
     // Allow requests with no origin (mobile apps, Postman, etc.)
     if (!origin) return callback(null, true);
     
-    if (config.allowedOrigins.includes(origin)) {
+    const isLocalhost = origin.includes('localhost') || origin.includes('127.0.0.1');
+    const isAllowedDomain = config.allowedOrigins.includes(origin);
+
+    if (isLocalhost || isAllowedDomain) {
       callback(null, true);
     } else {
       callback(new Error('Not allowed by CORS'));
     }
   },
   credentials: true,
-  methods: ['GET', 'POST'],
-  allowedHeaders: ['Content-Type', 'Authorization']
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With', 'Accept']
 }));
 
 // Rate limiting

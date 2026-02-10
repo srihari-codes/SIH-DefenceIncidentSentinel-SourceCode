@@ -40,7 +40,7 @@ module.exports = {
   tokens: {
     challengeExpiry: '5m',      // Login challenge
     registrationExpiry: '30m',  // Registration challenge
-    accessExpiry: '15m',        // Access token
+    accessExpiry: '7d',        // Access token
     refreshExpiry: '7d',        // Refresh token
     otpExpiry: 5 * 60 * 1000    // 5 minutes in ms
   },

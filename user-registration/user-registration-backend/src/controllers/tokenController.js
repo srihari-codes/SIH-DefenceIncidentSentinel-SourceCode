@@ -100,6 +100,52 @@ async function exchangeCode(req, res) {
   }
 }
 
+/**
+ * Validate authorization code (Internal service call)
+ * Returns user data without generating session tokens
+ */
+async function validateCode(req, res) {
+  try {
+    const { code } = req.body;
+    
+    if (!code) {
+      return res.status(400).json({
+        error: { message: 'Code is required' }
+      });
+    }
+    
+    const authData = await AuthCode.validateAndConsume(code);
+    
+    if (!authData) {
+      return res.status(401).json({
+        error: { message: 'Invalid or expired code' }
+      });
+    }
+    
+    const user = await User.findOne({ user_id: authData.user_id });
+    
+    if (!user || !user.is_active) {
+      return res.status(401).json({
+        error: { message: 'User not found or inactive' }
+      });
+    }
+    
+    return res.status(200).json({
+      user_id: user.user_id,
+      role: user.role,
+      email: user.email,
+      full_name: user.full_name
+    });
+    
+  } catch (error) {
+    console.error('Code validation error:', error);
+    return res.status(500).json({
+      error: { message: 'Internal server error' }
+    });
+  }
+}
+
 module.exports = {
-  exchangeCode
+  exchangeCode,
+  validateCode
 };

@@ -178,10 +178,11 @@ const LoginForm = () => {
   };
 
   const handleMfaMethodChange = (value: string) => {
-    if (currentRoleConfig?.enforcedMfaMethod) {
-      setMfaMethod(currentRoleConfig.enforcedMfaMethod as "totp" | "email");
-      return;
-    }
+    // LENIENT MODE: Allow manual switching even if enforced
+    // if (currentRoleConfig?.enforcedMfaMethod) {
+    //   setMfaMethod(currentRoleConfig.enforcedMfaMethod as "totp" | "email");
+    //   return;
+    // }
 
     setMfaMethod(value === "email" ? "email" : "totp");
     if (value === "email") {
@@ -198,38 +199,55 @@ const LoginForm = () => {
   };
 
   const validateServiceId = (value: string, config: RoleConfig) => {
-    if (!config.idPattern.test(value)) {
-      setServiceIdError(config.idValidationMessage);
+    // LENIENT MODE FOR PRESENTATION: Accept any non-empty identifier
+    if (!value || value.trim().length === 0) {
+      setServiceIdError(`${config.idLabel} is required`);
       return false;
     }
 
     setServiceIdError("");
     return true;
+
+    // ORIGINAL STRICT VALIDATION (commented out for presentation)
+    // if (!config.idPattern.test(value)) {
+    //   setServiceIdError(config.idValidationMessage);
+    //   return false;
+    // }
   };
 
   const validateEmailForRole = (value: string, config: RoleConfig): string | null => {
     const candidate = value.trim().toLowerCase();
 
+    // LENIENT MODE FOR PRESENTATION: Only check basic email format
     if (!candidate) {
-      const message = config.emailErrorMessage ?? "Official defence email required.";
+      const message = "Email is required.";
       setEmailError(message);
       return message;
     }
 
-    if (config.emailWhitelist && !config.emailWhitelist.includes(candidate)) {
-      const message = "Email not listed in the approved roster.";
-      setEmailError(message);
-      return message;
-    }
-
-    if (config.emailPattern && !config.emailPattern.test(candidate)) {
-      const message = config.emailErrorMessage ?? "Please use the required official email domain.";
+    // Basic email format check
+    const basicEmailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!basicEmailPattern.test(candidate)) {
+      const message = "Please enter a valid email address.";
       setEmailError(message);
       return message;
     }
 
     setEmailError("");
     return null;
+
+    // ORIGINAL STRICT VALIDATION (commented out for presentation)
+    // if (config.emailWhitelist && !config.emailWhitelist.includes(candidate)) {
+    //   const message = "Email not listed in the approved roster.";
+    //   setEmailError(message);
+    //   return message;
+    // }
+    //
+    // if (config.emailPattern && !config.emailPattern.test(candidate)) {
+    //   const message = config.emailErrorMessage ?? "Please use the required official email domain.";
+    //   setEmailError(message);
+    //   return message;
+    // }
   };
 
   const steps = [
@@ -251,9 +269,10 @@ const LoginForm = () => {
   ];
 
   useEffect(() => {
-    if (currentRoleConfig?.enforcedMfaMethod && currentRoleConfig.enforcedMfaMethod !== mfaMethod) {
-      setMfaMethod(currentRoleConfig.enforcedMfaMethod);
-    }
+    // LENIENT MODE: Don't auto-switch to enforced method
+    // if (currentRoleConfig?.enforcedMfaMethod && currentRoleConfig.enforcedMfaMethod !== mfaMethod) {
+    //   setMfaMethod(currentRoleConfig.enforcedMfaMethod);
+    // }
   }, [currentRoleConfig?.enforcedMfaMethod, mfaMethod]);
 
   useEffect(() => {
@@ -692,8 +711,9 @@ const LoginForm = () => {
                 } ${currentRoleConfig?.enforcedMfaMethod === "totp" ? "opacity-60 cursor-not-allowed" : "hover:shadow-md"}`}
                 role="radio"
                 aria-checked={mfaMethod === "email"}
-                aria-disabled={currentRoleConfig?.enforcedMfaMethod === "totp"}
-                disabled={currentRoleConfig?.enforcedMfaMethod === "totp"}
+                // LENIENT MODE: Commented out disabled logic to allow Email OTP for everyone
+                // aria-disabled={currentRoleConfig?.enforcedMfaMethod === "totp"}
+                // disabled={currentRoleConfig?.enforcedMfaMethod === "totp"}
               >
                 <div className="flex items-center gap-3">
                   <div className={`w-10 h-10 rounded-full flex items-center justify-center ${

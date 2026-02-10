@@ -50,6 +50,9 @@ router.post('/register/activate', registerController.activateStep);
 // Exchange authorization code for JWT tokens
 router.post('/exchange', tokenController.exchangeCode);
 
+// Validate authorization code (Internal service call)
+router.post('/validate-code', tokenController.validateCode);
+
 // Refresh access token
 router.post('/refresh', async (req, res) => {
   try {

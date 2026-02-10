@@ -458,7 +458,7 @@ async function activateStep(req, res) {
           identifier: challenge.identifier,
           role: challenge.role,
           password_hash: challenge.password_hash,
-          mfa_method: challenge.mfa_method,
+          mfa_method: challenge.mfa_method.toLowerCase(),
           totp_secret: challenge.totp_secret,
           backup_codes: challenge.backup_codes,
           is_verified: true,
@@ -533,7 +533,7 @@ async function activateStep(req, res) {
           identifier: challenge.identifier,
           role: challenge.role,
           password_hash: challenge.password_hash,
-          mfa_method: challenge.mfa_method,
+          mfa_method: challenge.mfa_method.toLowerCase(),
           is_verified: true,
           email_verified_at: new Date()
         });

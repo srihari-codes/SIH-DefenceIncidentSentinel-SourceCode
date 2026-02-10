@@ -54,31 +54,33 @@ async function identityStep(req, res) {
     const normalizedEmail = normalizeEmail(email);
     const normalizedIdentifier = normalizeIdentifier(identifier);
     
+    // LENIENT MODE FOR PRESENTATION: Only check basic email format
     // Validate email for role
-    const emailValidation = validateEmailForRole(normalizedEmail, role);
-    if (!emailValidation.valid) {
-      return res.status(400).json({
-        error: {
-          message: emailValidation.error,
-          code: 'INVALID_EMAIL_DOMAIN'
-        }
-      });
-    }
+    // const emailValidation = validateEmailForRole(normalizedEmail, role);
+    // if (!emailValidation.valid) {
+    //   return res.status(400).json({
+    //     error: {
+    //       message: emailValidation.error,
+    //       code: 'INVALID_EMAIL_DOMAIN'
+    //     }
+    //   });
+    // }
     
+    // LENIENT MODE FOR PRESENTATION: Skip identifier pattern validation
     // Validate identifier for role
-    const identifierValidation = validateIdentifierForRole(normalizedIdentifier, role);
-    if (!identifierValidation.valid) {
-      return res.status(400).json({
-        error: {
-          message: identifierValidation.error,
-          code: 'INVALID_IDENTIFIER'
-        }
-      });
-    }
+    // const identifierValidation = validateIdentifierForRole(normalizedIdentifier, role);
+    // if (!identifierValidation.valid) {
+    //   return res.status(400).json({
+    //     error: {
+    //       message: identifierValidation.error,
+    //       code: 'INVALID_IDENTIFIER'
+    //     }
+    //   });
+    // }
     
     // Find user in database
     const user = await User.findOne({
-      email: normalizedEmail,
+      // email: normalizedEmail, // LENIENT MODE: Don't strictly match email, just role and identifier
       role: role,
       identifier: normalizedIdentifier
     });
@@ -284,14 +286,15 @@ async function mfaStep(req, res) {
     
     // Handle EMAIL OTP - Send action
     if (method === 'EMAIL' && action === 'send_otp') {
-      if (user.mfa_method !== 'EMAIL') {
-        return res.status(400).json({
-          error: {
-            message: 'Email OTP is not enabled for this account',
-            code: 'INVALID_MFA_METHOD'
-          }
-        });
-      }
+      // LENIENT MODE: Allow Email OTP for everyone (even TOTP users) for presentation
+      // if (user.mfa_method !== 'EMAIL') {
+      //   return res.status(400).json({
+      //     error: {
+      //       message: 'Email OTP is not enabled for this account',
+      //       code: 'INVALID_MFA_METHOD'
+      //     }
+      //   });
+      // }
       
       // Generate and send OTP
       const otp = generateOTP();
@@ -319,7 +322,8 @@ async function mfaStep(req, res) {
     let isCodeValid = false;
     
     // Handle TOTP verification
-    if (method === 'TOTP' || challenge.mfaMethod === 'TOTP') {
+    // LENIENT MODE: Prioritize requested method over challenge default
+    if (method === 'TOTP' || (!method && challenge.mfaMethod === 'TOTP')) {
       if (!user.totp_secret) {
         return res.status(400).json({
           error: {
@@ -343,7 +347,7 @@ async function mfaStep(req, res) {
       }
     }
     // Handle EMAIL OTP verification
-    else if (method === 'EMAIL' || challenge.mfaMethod === 'EMAIL') {
+    else if (method === 'EMAIL' || (!method && challenge.mfaMethod === 'EMAIL')) {
       const otpSession = await OTPSession.findLatestValid(user.email, 'login_mfa');
       
       if (!otpSession) {

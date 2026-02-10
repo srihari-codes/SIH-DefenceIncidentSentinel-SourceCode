@@ -5,28 +5,24 @@
 // Email domain patterns by role
 const EMAIL_PATTERNS = {
   personnel: {
-    pattern: /@(mil\.in|nic\.in|gov\.in)$/i,
-    required: true,
-    errorMessage: 'Official defence email required (@mil.in, @nic.in, @gov.in)'
+    pattern: null,
+    required: false
   },
   family: {
-    pattern: null, // Any email accepted
-    required: false,
-    warningMessage: 'Non-defence email may require manual verification'
+    pattern: null, 
+    required: false
   },
   veteran: {
-    pattern: null, // Any email accepted
+    pattern: null,
     required: false
   },
   cert: {
-    pattern: /@(cert-in\.org\.in|gov\.in|nic\.in)$/i,
-    required: true,
-    errorMessage: 'Official CERT/Gov email required (@cert-in.org.in, @gov.in, @nic.in)'
+    pattern: null,
+    required: false
   },
   admin: {
-    pattern: /@mod\.gov\.in$/i,
-    required: true,
-    errorMessage: 'Only @mod.gov.in emails permitted for admin role'
+    pattern: null,
+    required: false
   }
 };
 
@@ -36,7 +32,7 @@ const IDENTIFIER_PATTERNS = {
   family: /^[A-Z0-9-]{6,20}$/,       // e.g., DEP-2024-5678
   veteran: /^[A-Z0-9-]{6,20}$/,      // e.g., PPO-2020-9876
   cert: /^[A-Z0-9-]{5,15}$/,         // e.g., CERT-2024-101
-  admin: /^[a-zA-Z0-9._%+-]+@mod\.gov\.in$/ // Email as identifier
+  admin: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/ // Any email as identifier
 };
 
 // MFA methods enforced by role
@@ -97,22 +93,31 @@ function validateEmailForRole(email, role) {
  * @returns {{ valid: boolean, error?: string }}
  */
 function validateIdentifierForRole(identifier, role) {
-  const pattern = IDENTIFIER_PATTERNS[role];
-  if (!pattern) {
-    return { valid: false, error: 'Invalid role' };
+  // LENIENT MODE FOR PRESENTATION: Accept any non-empty identifier
+  if (!identifier || identifier.trim().length === 0) {
+    return { valid: false, error: 'Identifier is required' };
   }
   
-  // Normalize identifier (uppercase, trim)
-  const normalizedIdentifier = identifier.toUpperCase().trim();
-  
-  if (!pattern.test(normalizedIdentifier)) {
-    return { 
-      valid: false, 
-      error: `Invalid identifier format for ${role}` 
-    };
-  }
-  
+  // Skip pattern validation for presentation
   return { valid: true };
+  
+  // ORIGINAL STRICT VALIDATION (commented out for presentation)
+  // const pattern = IDENTIFIER_PATTERNS[role];
+  // if (!pattern) {
+  //   return { valid: false, error: 'Invalid role' };
+  // }
+  // 
+  // // Normalize identifier (uppercase, trim)
+  // const normalizedIdentifier = identifier.toUpperCase().trim();
+  // 
+  // if (!pattern.test(normalizedIdentifier)) {
+  //   return { 
+  //     valid: false, 
+  //     error: `Invalid identifier format for ${role}` 
+  //   };
+  // }
+  // 
+  // return { valid: true };
 }
 
 /**
